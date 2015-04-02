@@ -1,0 +1,24 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// Margins, padding, and positioning
+
+.margin-navbar {
+  margin: 5px 0;
+}
+.nudge-down-5 {
+  position: relative;
+  top: 5px;
+}
+
+// Colors
+
+.bgcolor-border {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  background-color: cornsilk;
+}
+
+.color-accent {
+  color: slategray;
+}
