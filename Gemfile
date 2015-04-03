@@ -13,6 +13,8 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'bootstrap-sass'
 # Devise
 gem 'devise'
+# Env vars
+gem 'figaro', '1.0'
 
 group :production do
   gem 'pg'
