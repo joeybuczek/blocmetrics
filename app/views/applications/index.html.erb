@@ -18,7 +18,7 @@
         
           <% @applications.each do |application| %>
             <tr>
-              <td class="td-adjust"><%= application.name %></td>
+              <td class="td-adjust"><%= link_to "#{application.name}", application %></td>
               <td class="td-adjust"><%= link_to "#{application.url}", application.url, target: "_blank" %></td>
               <td>
                 <%= link_to "JS", "#", class: 'btn btn-default' %>
