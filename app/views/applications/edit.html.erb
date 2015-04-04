@@ -1,0 +1,25 @@
+<div class="row bgcolor-border margin-row">
+  <div class="col-md-8">
+
+    <h1>Update Application</h1>
+    <br/>
+    
+    <%= form_for @application do |f| %>
+    
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, autofocus: true, class: 'form-control' %>
+      </div>
+    
+      <div class="form-group">
+        <%= f.label :URL %>
+        <%= f.text_field :url, class: 'form-control' %>
+      </div>
+    
+      <div class="form-group">
+        <%= f.submit "Update", class: 'btn btn-info' %>
+      </div>
+    
+    <% end %>
+
+  </div>

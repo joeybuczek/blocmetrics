@@ -1,0 +1,35 @@
+<div class="row bgcolor-border margin-row">
+  <div class="col-md-12">
+
+    <h2>My Registered Applications</h2>
+    
+    <%= link_to "Register an Application", new_application_path, class: 'btn btn-info nudge-down-5' %>
+    <br/><br/>
+
+    <table class="table table-responsive">
+      <thead>
+        <tr>
+          <td class="width-25"><strong>Application Name</strong></td>
+          <td class="width-50"><strong>Application URL</strong></td>
+          <td class="width-25"></td>
+        </tr>
+      </thead>
+      <tbody>
+        
+          <% @applications.each do |application| %>
+            <tr>
+              <td class="td-adjust"><%= application.name %></td>
+              <td class="td-adjust"><%= link_to "#{application.url}", application.url, target: "_blank" %></td>
+              <td>
+                <%= link_to "JS", "#", class: 'btn btn-default' %>
+                <%= link_to "Edit", edit_application_path(application), class: 'btn btn-default' %>
+                <%= link_to "Remove", application, method: :delete, class: 'btn btn-default' %>
+              </td>
+            </tr>
+          <% end %>
+        
+      </tbody>
+    </table>
+    
+  </div>
+</div>

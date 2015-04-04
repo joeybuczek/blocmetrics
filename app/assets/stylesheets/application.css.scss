@@ -22,6 +22,10 @@
   margin-left: 0;
   margin-right: 0;
 }
+.td-adjust {
+  position: relative;
+  top: 6px;
+}
 
 // Colors
 
@@ -33,4 +37,13 @@
 
 .color-accent {
   color: slategray;
+}
+
+// Sizing
+
+.width-25 {
+  width: 25%;
+}
+.width-50 {
+  width: 50%;
 }
