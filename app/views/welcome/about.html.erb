@@ -4,6 +4,10 @@
     <h1>We <span class="glyphicon glyphicon-heart color-accent nudge-down-5"></span> analytics!</h1>
     <p>That's why we created Blocmetrics; to help you make sense of your web traffic.</p>
     <p>We made it even easier for your to add our service to your site. Just copy and paste our javascript snippet into your code and voila! Instant analytics!</p>
+    <br/>
+    <% unless current_user %>
+      <p>But first... you need to <%= link_to "sign up!", new_user_registration_path %></p>
+    <% end %>
 
   </div>
 </div>
