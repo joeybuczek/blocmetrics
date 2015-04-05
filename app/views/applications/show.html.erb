@@ -4,7 +4,22 @@
     <h1><%= @application.name %></h1>
     <br/>
     
-    
-
+    <table class="table">
+      <thead>
+        <tr>
+          <td><strong>Event Type</strong></td>
+          <td><strong>Number of Events</strong></td>
+        </tr>
+      </thead>
+      <tbody>
+        <% @events.each do |e| %>
+          <tr>
+            <td><%= e[0] %></td>
+            <td><%= e[1].count %></td>
+          </tr>
+        <% end %>     
+      </tbody>
+    </table>
+ 
   </div>
 </div>
