@@ -13,11 +13,11 @@ class ApplicationsController < ApplicationController
   
   def create
     @application = current_user.applications.build(application_params)
-    if does_not_yet_exist
-      @application.save
+    if does_not_exist && @application.save
+      flash[:notice] = "Success!"
       redirect_to applications_path
     else
-      flash[:error] = "That application is already registered. Please choose another."
+      if does_not_exist == false then  flash[:error] = "The URL you entered is already associated with another application. Please enter a different URL." end
       render :new
     end
   end
@@ -48,7 +48,7 @@ class ApplicationsController < ApplicationController
     params.require(:application).permit(:name, :url)
   end
   
-  def does_not_yet_exist
+  def does_not_exist
     Application.where( url: @application.url ).blank?
   end
   

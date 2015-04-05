@@ -6,12 +6,22 @@
     
     <%= form_for @application do |f| %>
     
-      <div class="form-group">
+      <% if @application.errors.any? %>
+        <div class="alert alert-danger">
+          <ul>
+            <% @application.errors.full_messages.each do |e_msg| %>
+              <li><%= e_msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    
+      <div class="form-group <%= error_check_tag(@application.errors[:name]) %>">
         <%= f.label :name %>
         <%= f.text_field :name, autofocus: true, class: 'form-control' %>
       </div>
     
-      <div class="form-group">
+      <div class="form-group <%= error_check_tag(@application.errors[:url]) %>">
         <%= f.label :URL %>
         <%= f.text_field :url, class: 'form-control' %>
       </div>
