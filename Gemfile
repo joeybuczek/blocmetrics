@@ -15,6 +15,8 @@ gem 'bootstrap-sass'
 gem 'devise'
 # Env vars
 gem 'figaro', '1.0'
+# Faker
+gem 'faker'
 
 group :production do
   gem 'pg'
