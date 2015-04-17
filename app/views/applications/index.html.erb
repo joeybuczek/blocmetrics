@@ -23,7 +23,7 @@
               <td>
                 <%= link_to "JS", "#", class: 'btn btn-default' %>
                 <%= link_to "Edit", edit_application_path(application), class: 'btn btn-default' %>
-                <%= link_to "Remove", application, method: :delete, class: 'btn btn-default' %>
+                <%= link_to "Remove", application, method: :delete, class: 'btn btn-default', data: { confirm: "Are you sure you want to remove this application?" } %>
               </td>
             </tr>
           <% end %>
