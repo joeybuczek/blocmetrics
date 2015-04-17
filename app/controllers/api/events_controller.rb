@@ -25,7 +25,7 @@ class API::EventsController < ApplicationController
   end
   
   # Curl testing payload:
-  # curl -v -H "Accept: application/json" -H "Origin: http://test.app.com" "Content-type: application/json" -X POST -d 'name=foobar' https://joey-blocmetrics.herokuapp.com/api/events
+  # curl -v -H "Accept: application/json" -H "Origin: http://test.app.com" "Content-type: application/json" -X POST -d 'name=Testing' https://joey-blocmetrics.herokuapp.com/api/events
   
   # The params received from the above will look like this:
   # {"name"=>"foobar", "action"=>"create", "default"=>{"format"=>:json}, "controller"=>"api/events"}
