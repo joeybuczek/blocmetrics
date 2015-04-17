@@ -26,14 +26,16 @@ event_types = ["Sign in", "Sign out", "Purchase", "Reset Password", "Error 404"]
 250.times do
   Event.create!(
     name:         event_types[rand(3)],
-    application:  apps.sample
+    application:  apps.sample,
+    logged_str:   Faker::Date.backward(30)
   )
 end
 
 25.times do
   Event.create!(
     name:         event_types[rand(5)],
-    application:  apps.sample
+    application:  apps.sample,
+    logged_str:   Faker::Date.backward(30)
   )
 end
 

@@ -35,13 +35,15 @@
             <strong>Event Count by Name</strong>
             <br/>
             <%= pie_chart @application.events.group(:name).count %>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <strong>Event Count by Date</strong>
+            <strong>Event Count by Date : Purchase</strong>
+            <%= line_chart @application.events.group(:logged_str).where(name: "Purchase").count %>
             <br/>
-            <%= line_chart @application.events.group(:created_at).count %>
+            <strong>Event Count by Date : Error 404</strong>
+            <br/>
+            <%= column_chart @application.events.group(:logged_str).where(name: "Error 404").count %>
+            <strong>Event Count by Date : All</strong>
+            <br/>
+            <%= line_chart @application.events.group(:logged_str).count %>
           </td>
         </tr>
       </tbody>
