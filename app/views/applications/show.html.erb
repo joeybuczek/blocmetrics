@@ -31,10 +31,18 @@
       </thead>
       <tbody>
         <tr>
-          <td><%= pie_chart @application.events.group(:name).count %></td>
+          <td>
+            <strong>Event Count by Name</strong>
+            <br/>
+            <%= pie_chart @application.events.group(:name).count %>
+          </td>
         </tr>
         <tr>
-          <td><%= column_chart @application.events.group(:name).count %></td>
+          <td>
+            <strong>Event Count by Day</strong>
+            <br/>
+            <%= line_chart @application.events.group_by_day(:created_at).count %>
+          </td>
         </tr>
       </tbody>
     </table>

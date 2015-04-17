@@ -57,6 +57,8 @@ GEM
       i18n (~> 0.5)
     figaro (1.0.0)
       thor (~> 0.14)
+    groupdate (2.4.0)
+      activesupport (>= 3)
     hike (1.2.3)
     i18n (0.7.0)
     jbuilder (2.2.12)
@@ -144,6 +146,7 @@ DEPENDENCIES
   devise
   faker
   figaro (= 1.0)
+  groupdate
   jbuilder (~> 2.0)
   jquery-rails
   pg

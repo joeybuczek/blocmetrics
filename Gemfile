@@ -19,6 +19,8 @@ gem 'figaro', '1.0'
 gem 'faker'
 # ChartKick
 gem 'chartkick'
+# GroupDate
+gem 'groupdate'
 
 group :production do
   gem 'pg'
