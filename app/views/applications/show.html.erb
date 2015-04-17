@@ -39,9 +39,9 @@
         </tr>
         <tr>
           <td>
-            <strong>Event Count by Day</strong>
+            <strong>Event Count by Date</strong>
             <br/>
-            <%= line_chart @application.events.group_by_day(:created_at).count %>
+            <%= line_chart @application.events.group(:created_at).count %>
           </td>
         </tr>
       </tbody>

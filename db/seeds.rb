@@ -20,25 +20,17 @@ end
 apps = Application.all
 
 # Create events for apps
-
 event_types = Faker::Lorem.words(5)
 event_types = ["Sign in", "Sign out", "Purchase", "Reset Password", "Error 404"]
 
-50.times do
+250.times do
   Event.create!(
-    name:         event_types[rand(5)],
+    name:         event_types[rand(3)],
     application:  apps.sample
   )
 end
 
-50.times do
-  Event.create!(
-    name:         event_types[rand(5)],
-    application:  apps.sample
-  )
-end
-
-50.times do
+25.times do
   Event.create!(
     name:         event_types[rand(5)],
     application:  apps.sample
