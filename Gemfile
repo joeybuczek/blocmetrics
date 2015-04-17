@@ -17,6 +17,8 @@ gem 'devise'
 gem 'figaro', '1.0'
 # Faker
 gem 'faker'
+# ChartKick
+gem 'chartkick'
 
 group :production do
   gem 'pg'
